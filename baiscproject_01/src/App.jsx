@@ -1,29 +1,28 @@
-import React from 'react';
-import Btn from './component/button';
-import './App.css';
-
+import React, { useState } from 'react';
+import Btn from './comp/Btn';
 function App() {
-  // const [bgColor, setBgColor] = useState('white');
-
-  const handleColorChange = (color) => {
-    // bgColor = color
-    document.body.style.backgroundColor = color ;
-  }
+  const [bgColor, setBgColor] = useState('olive');
 
   return (
-    <div className='flex  text-gray-400 m-2 relative bg-slate-50 rounded-lg top-[250px]'
-         style={{ boxShadow: '5px 5px 10px rgba(0, 0, 0, 0.3)' }}
-    >
-      <Btn name='Red' color='red' onClick={handleColorChange} />
-      <Btn name='Yellow' color='yellow' onClick={handleColorChange} />
-      <Btn name='Blue' color='blue' onClick={handleColorChange} />
-      <Btn name='White' color='white' onClick={handleColorChange} />
-      <Btn name='Black' color='black' onClick={handleColorChange} />
-      <Btn name='Grey' color='grey' onClick={handleColorChange} />
-      <Btn name='Pink' color='pink' onClick={handleColorChange} />
-      <Btn name='Purple' color='purple' onClick={handleColorChange} />
-      <Btn name='Green' color='green' onClick={handleColorChange} />
-      <Btn name='Olive' color='olive' onClick={handleColorChange} />
+    <div>
+   
+    <div className='h-screen w-full justify-center text-centre'  style={{ backgroundColor: bgColor }}>
+      <div
+        className='flex text-gray-400 m-2 fixed inset-x-0 px-2 justify-between bg-slate-50 rounded-lg bottom-12 flex-wrap'
+        style={{ boxShadow: '5px 5px 10px rgba(0, 0, 0, 0.3)' }}
+      >
+        <Btn onClick={() => setBgColor('red')}  name='Red' color='red' />
+        <Btn onClick={() => setBgColor('yellow')}  name='Yellow' color='yellow' />
+        <Btn onClick={() => setBgColor('blue')} name='Blue' color='blue' />
+        <Btn onClick={() => setBgColor('black')} name='Black' color='black' />
+        <Btn onClick={() => setBgColor('white')} name='White' color='white'  />
+        <Btn onClick={() => setBgColor('grey')} name='Grey' color='grey' />
+        <Btn onClick={() => setBgColor('pink')} name='Pink' color='pink' />
+        <Btn onClick={() => setBgColor('purple')} name='Purple' color='purple' />
+        <Btn onClick={() => setBgColor('green')} name='Green' color='green' />
+        <Btn onClick={() => setBgColor('olive')} name='Olive' color='olive' />
+      </div>
+    </div>
     </div>
   );
 }
