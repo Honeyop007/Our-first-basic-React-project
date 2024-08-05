@@ -8,7 +8,7 @@ function App() {
    
     <div className='h-screen w-full justify-center text-centre'  style={{ backgroundColor: bgColor }}>
       <div
-        className='flex text-gray-400 m-2 fixed inset-x-0 px-2 justify-between bg-slate-50 rounded-lg bottom-12 flex-wrap'
+        className='flex text-gray-400 m-2 fixed inset-x-0 px-2 justify-evenly bg-slate-50 rounded-lg bottom-12 flex-wrap'
         style={{ boxShadow: '5px 5px 10px rgba(0, 0, 0, 0.3)' }}
       >
         <Btn onClick={() => setBgColor('red')}  name='Red' color='red' />
