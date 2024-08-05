@@ -2,8 +2,8 @@ import React from 'react';
 
 function Btn({ name, color, onClick }) {
   // Determine text color based on background color
-  const textColor = color === 'white' ? 'black' : 'white';
-
+  
+  const textColor = color === 'white' || color === 'pink' || color === 'yellow'? 'black' : 'white';
   return (
     <button
       className='rounded-3xl outline-none font-semibold'
